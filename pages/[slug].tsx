@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import {
-  getAllPostsWithBlogSettings,
-  getSinglePostBySlug,
-  getHeaderData,
-  getFooterData
+	getAllPostsWithBlogSettings,
+	getSinglePostBySlug,
+	getHeaderData,
+	getFooterData
 } from "../lib/api";
 
 import Layout from "../components/layout";
@@ -14,62 +14,62 @@ import SingleBlogHeroSection from "../components/singleBlogHeroSection";
 import SingleBlogContent from "../components/singleBlogContent";
 
 interface Props {
-  post: any;
-  headerData: any;
-  footerData: any;
+	post: any;
+	headerData: any;
+	footerData: any;
 }
 
 interface Params extends ParsedUrlQuery {
-  slug: string;
+	slug: string;
 }
 
 export default function BlogPostPage({ post, headerData, footerData }: Props) {
-  return (
-    <Layout>
-      <Header headerData={headerData} />
-      <SingleBlogHeroSection post={post} />
-      <SingleBlogContent post={post} />
-      <Footer footerData={footerData} />
-    </Layout>
-  );
+	return (
+		<Layout>
+			<Header headerData={headerData} />
+			<SingleBlogHeroSection post={post} />
+			<SingleBlogContent post={post} />
+			<Footer footerData={footerData} />
+		</Layout>
+	);
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = await getAllPostsWithBlogSettings();
+	const posts = await getAllPostsWithBlogSettings();
 
-  const paths = posts.edges.map(({ node }) => ({
-    params: { slug: node.slug }
-  }));
+	const paths = posts.edges.map(({ node }) => ({
+		params: { slug: node.slug }
+	}));
 
-  return {
-    paths,
-    fallback: false // use 'blocking' if you expect new posts after build
-  };
+	return {
+		paths,
+		fallback: 'blocking', // use 'blocking' if you expect new posts after build
+	};
 };
 
 export const getStaticProps: GetStaticProps<Props, Params> = async ({ params }) => {
-  if (!params?.slug) {
-    return {
-      notFound: true
-    };
-  }
+	if (!params?.slug) {
+		return {
+			notFound: true
+		};
+	}
 
-  const post = await getSinglePostBySlug(params.slug);
-  const headerData = await getHeaderData();
-  const footerData = await getFooterData();
+	const post = await getSinglePostBySlug(params.slug);
+	const headerData = await getHeaderData();
+	const footerData = await getFooterData();
 
-  if (!post) {
-    return {
-      notFound: true
-    };
-  }
+	if (!post) {
+		return {
+			notFound: true
+		};
+	}
 
-  return {
-    props: {
-      post,
-      headerData,
-      footerData
-    },
-    revalidate: 10
-  };
+	return {
+		props: {
+			post,
+			headerData,
+			footerData
+		},
+		revalidate: 10
+	};
 };

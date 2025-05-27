@@ -52,14 +52,12 @@ export default function SingleBlogContent({ post }) {
 
 				<div className="flex flex-col lg:flex-row gap-12 mt-12">
 					<div className="lg:w-3/4">
-						<div ref={contentRef}
-							className="prose prose-invert max-w-none scroll-smooth"
-							dangerouslySetInnerHTML={{ __html: post?.content }}
+						<div ref={contentRef} className="prose prose-invert max-w-none scroll-smooth pt-8 pb-8 space-y-6" dangerouslySetInnerHTML={{ __html: post?.content }}
 						/>
 					</div>
 
 					<div className="lg:w-1/4 space-y-10">
-						<aside className="bg-[#1A1A2E] p-6 rounded-lg border border-gray-700 h-fit sticky top-24">
+						{/*<aside className="bg-[#1A1A2E] p-6 rounded-lg border border-gray-700 h-fit sticky top-24">
 							<h3 className="text-white text-lg mb-4">Table of contents</h3>
 							<ol className="space-y-3 text-sm">
 								{headings.map((heading) => (
@@ -71,7 +69,7 @@ export default function SingleBlogContent({ post }) {
 									</li>
 								))}
 							</ol>
-						</aside>
+						</aside>*/}
 
 						<div className="mt-6">
 							<h4 className="text-xs uppercase text-white mb-2">Want more trade tips like this?</h4>
