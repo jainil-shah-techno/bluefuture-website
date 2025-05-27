@@ -1,0 +1,62 @@
+/* purgecss start ignore */
+
+.sitemap_wrapper{
+    @apply p-4 mt-12 mb-8 no-underline;
+}
+.sitemap_row{
+    @apply grid grid-cols-1 sm:grid-cols-3 gap-12;
+}
+.sitemap_col{
+    @apply flex flex-col gap-4;
+}
+.sitemap_title{  
+    @apply text-2xl font-semibold mb-6 hover:text-[#50DCF2];
+}
+.sitemap_title a{  
+    text-decoration: none !important;
+}
+.sitemap_subtitle a{  
+    @apply mb-4 text-xl font-semibold hover:text-[#50DCF2];
+    text-decoration: none !important;
+}
+.sitemap_menu{
+    @apply text-base font-normal text-black hover:text-[#50DCF2];
+    text-decoration: none !important;
+}
+.sitemap_ul{
+    @apply flex flex-col ml-1 gap-2 list-disc text-base;
+}
+.sitemap_submenu_list{
+    @apply flex flex-col gap-4;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes marqueeRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes marqueeLeft {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee-right {
+  animation: marqueeRight 20s linear infinite;
+}
+
+.animate-marquee-left {
+  animation: marqueeLeft 20s linear infinite;
+}
+
+@keyframes marqueeLeft {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee-left {
+  animation: marqueeLeft 20s linear infinite;
+}
