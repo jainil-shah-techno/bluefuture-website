@@ -6,7 +6,7 @@ import Wrapper from "../components/wrapper";
 export default function SingleBlogHeroSection({ post }) {
 	return (
 		<Wrapper className="bg-dark-blue text-white py-16 overflow-hidden">
-			<Container>
+			<Container className="" >
 				<div className="flex flex-col justify-center items-center gap-4">
 					<h2 className="text-6xl text-center">{post.title}</h2>
 					<p className="text-light-gray text-xl text-center" dangerouslySetInnerHTML={{ __html: post.excerpt }} />

@@ -16,10 +16,10 @@ export default function JoinCommunity({ communitySectionData }) {
 				<Container className="">
 					<div className="flex flex-col md:flex-row justify-between">
 						<div className="flex flex-col gap-1 md:gap-2">
-							<h2 className="text-center md:text-left text-white text-3xl md:text-5xl font-semibold leading-tight" dangerouslySetInnerHTML={{ __html: communitySectionData.communitySectionHeading }}>
-							</h2>
-							<p className="text-center md:text-left text-light-gray text-sm mt-2"dangerouslySetInnerHTML={{ __html: communitySectionData.communitySectionDescription }}>
-							</p>
+							<h2 className="text-center md:text-left text-white text-3xl md:text-5xl font-semibold leading-tight" 
+								dangerouslySetInnerHTML={{ __html: communitySectionData.communitySectionHeading }} />
+							<div className="text-center md:text-left text-light-gray text-sm mt-2"dangerouslySetInnerHTML={{ __html: communitySectionData.communitySectionDescription }}>
+							</div>
 						</div>
 
 						<div className="flex md:block flex-shrink-0 pt-4 md:pt-0 justify-center items-center">

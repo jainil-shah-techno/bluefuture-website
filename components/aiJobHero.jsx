@@ -20,9 +20,9 @@ export default function AIJobHero({ aiJobHeroSectionData }) {
 			<Container className="max-w-7xl mx-auto px-4 mt-10">
 				<div className="text-center">
 					<h2 className="text-3xl sm:text-4xl md:text-5xl font-medium leading-snug md:leading-tight" dangerouslySetInnerHTML={{	__html: aiJobHeroSectionData.aiSectionHeading }}  />
-					<p className="mt-4 text-sm sm:text-base text-light-gray max-w-xl mx-auto">
+					<div className="mt-4 text-sm sm:text-base text-light-gray max-w-xl mx-auto">
 						{aiJobHeroSectionData.aiSectionDescription}
-					</p>
+					</div>
 				</div>
 
 				<div className="flex flex-col md:flex-row gap-10 mt-10">

@@ -45,11 +45,11 @@ export default function AboutUs({ headerData, footerData, aboutData }) {
 
 				<Header headerData={headerData} />
 
-				{/*<AboutUsHeroSection aboutUsHeroSectionData={aboutUsHeroSectionData} />
+				<AboutUsHeroSection aboutUsHeroSectionData={aboutUsHeroSectionData} />
 
-				<ValuesStory valuesSectionData={valuesSectionData} />*/}
+				<ValuesStory valuesSectionData={valuesSectionData} />
 
-				{/*<WhyWeAreDifferent whyAreWeDifferentSectionData={whyAreWeDifferentSectionData} /> */}
+				<WhyWeAreDifferent whyAreWeDifferentSectionData={whyAreWeDifferentSectionData} />
 
 				<Impact impactSectionData={impactSectionData} />
 

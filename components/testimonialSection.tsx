@@ -35,9 +35,9 @@ export default function TestimonialSection({ testimonialSectionData }) {
 						<div className="bg-[#13172A] rounded-xl p-8 flex flex-col items-center max-w-md shadow-md">
 							<Image src={testimonialSectionData.customerImage?.node.sourceUrl} alt="Testimonial Image 1" 
 								className="rounded-md mb-4" width={473} height={315} />
-							<p className="text-center text-white text-xl mb-4 leading-relaxed"
+							<div className="text-center text-white text-xl mb-4 leading-relaxed"
 								dangerouslySetInnerHTML={{ __html: testimonialSectionData.customReview }}>
-							</p>
+							</div>
 							<div className="text-sm text-white mb-2">
 							  	{testimonialSectionData.customerName}
 							</div>

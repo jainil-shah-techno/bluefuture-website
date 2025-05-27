@@ -11,8 +11,8 @@ export default function HomeHeroSection({ heroSectionData }) {
 		<>	
 			<Wrapper className="bg-dark-blue py-12 text-white">
 				<Container className="text-center">
-					<h2 className="font-inter text-3xl md:text-6xl font-bold" dangerouslySetInnerHTML={{ __html: heroSectionData.sectionHeading }}>
-					</h2>
+					<h2 className="font-inter text-3xl md:text-6xl font-bold" 
+						dangerouslySetInnerHTML={{ __html: heroSectionData.sectionHeading }} /> 
 					<p className="mt-4 text-light-gray font-light max-w-2xl mx-auto text-base md:text-xl">
 						{heroSectionData.sectionDescription}
 					</p>

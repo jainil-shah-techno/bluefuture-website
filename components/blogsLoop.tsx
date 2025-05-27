@@ -28,7 +28,7 @@ export default function BlogsLoop({ blogData }) {
 
 	return (
 		<Wrapper className="bg-dark-blue text-white py-16 overflow-hidden">
-			<Container>
+			<Container className="" >
 				<div className="hidden md:flex flex-col md:flex-row gap-4 border border-border-color rounded-lg p-4">
 					<Image src={featuredBlog.node.featuredImage?.node.sourceUrl} width={432} 
 						height={432} className="w-full md:w-[432px] h-auto object-cover rounded-lg"

@@ -11,17 +11,14 @@ import Footer from "../components/footer/footer";
 export default function EmployerHeroSection({ employerHeroSectionData }) {
 	const serviceTags = employerHeroSectionData?.heroSectionServiceSlider || [];
 
-	console.log(employerHeroSectionData)
-
 	return (
 		<>	
 			<Wrapper className="bg-dark-blue py-12 text-white">
 				<Container className="text-center">
-					<h2 className="text-5xl md:text-6xl font-bold leading-tight"dangerouslySetInnerHTML={{ __html: employerHeroSectionData.title }}>
-					</h2>
-					<p className="mt-4 text-light-gray font-light text-base md:text-xl"
+					<h2 className="text-5xl md:text-6xl font-bold leading-tight"dangerouslySetInnerHTML={{ __html: employerHeroSectionData.title }} />					
+					<div className="mt-4 text-light-gray font-light text-base md:text-xl"
 						dangerouslySetInnerHTML={{ __html: employerHeroSectionData.description }}>
-					</p>
+					</div>
 				</Container>
 			</Wrapper>
 

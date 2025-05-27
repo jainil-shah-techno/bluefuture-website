@@ -14,8 +14,7 @@ export default function Impact({ impactSectionData }) {
 			<Container className="">
 				<div className="flex flex-col items-center text-center mb-16 px-4">
 					<h2 className="text-3xl sm:text-4xl md:text-5xl font-medium leading-tight"
-						dangerouslySetInnerHTML={{ __html: impactSectionData.impactHeading }}>
-					</h2>
+						dangerouslySetInnerHTML={{ __html: impactSectionData.impactHeading }} />
 					<p className="text-sm sm:text-base text-light-gray mt-4"
 						dangerouslySetInnerHTML={{ __html: impactSectionData.subheading }}>
 					</p>

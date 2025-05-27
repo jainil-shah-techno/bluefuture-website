@@ -47,7 +47,7 @@ export default function SingleBlogContent({ post }) {
 
 	return (
 		<Wrapper className="bg-dark-blue text-white py-4 overflow-hidden">
-			<Container>
+			<Container className="" >
 				<Image src={post.featuredImage.node.sourceUrl} width={1296} height={678} alt="Single Blog Image" />
 
 				<div className="flex flex-col lg:flex-row gap-12 mt-12">

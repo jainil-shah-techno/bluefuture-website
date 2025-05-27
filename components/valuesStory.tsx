@@ -15,7 +15,8 @@ export default function valuesStory({ valuesSectionData }) {
 			<Container className="">
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 					<div className="border border-[#FFA500] rounded-xl p-6 h-full">
-					  <h2 className="font-inter text-5xl font-bold mb-4" dangerouslySetInnerHTML={{ __html: valuesSectionData?.storyHeading }} />
+					  <h2 className="font-inter text-5xl font-bold mb-4" 
+					  	dangerouslySetInnerHTML={{ __html: valuesSectionData?.storyHeading }} />
 					  
 					  <p className="text-base font-semibold text-white mb-4">
 					    {valuesSectionData?.storySubheading}
@@ -31,9 +32,7 @@ export default function valuesStory({ valuesSectionData }) {
 
 					<div className="flex flex-col gap-6">
 						<div className="border border-[#FFA500] rounded-xl p-6">
-							<h2 className="font-inter text-5xl font-bold mb-4"
-								dangerouslySetInnerHTML={{ __html: valuesSectionData.visionHeading }}>
-							</h2>
+							<h2 className="font-inter text-5xl font-bold mb-4" dangerouslySetInnerHTML={{ __html: valuesSectionData.visionHeading }} />
 							<p className="text-base font-semibold text-white mb-4">
 								{valuesSectionData.visionSubheading}
 							</p>
@@ -45,9 +44,7 @@ export default function valuesStory({ valuesSectionData }) {
 						</div>
 
 						<div className="border border-[#FFA500] rounded-xl p-6">
-							<h2 className="font-inter text-5xl font-bold mb-4"
-								dangerouslySetInnerHTML={{ __html: valuesSectionData.missionHeading }}>
-							</h2>
+							<h2 className="font-inter text-5xl font-bold mb-4" dangerouslySetInnerHTML={{ __html: valuesSectionData.missionHeading }} />
 							<p className="text-base font-semibold text-white mb-4"
 								dangerouslySetInnerHTML={{ __html: valuesSectionData.missionSubheading }}></p>
 							<ul className="list-disc list-inside text-base text-light-gray space-y-2 mx-4">

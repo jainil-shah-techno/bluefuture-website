@@ -15,11 +15,10 @@ export default function AboutUsHeroSection({ aboutUsHeroSectionData }) {
 				<Wrapper className="bg-dark-blue py-10 text-white rounded-t-2xl">
 					<Container className="text-center">
 						<h2 className="font-inter text-4xl md:text-6xl font-bold"
-							dangerouslySetInnerHTML={{ __html: aboutUsHeroSectionData.aboutSectionHeading }}>
-						</h2>
-						<p className="mt-4 text-light-gray font-light text-base md:text-xl"
+							dangerouslySetInnerHTML={{ __html: aboutUsHeroSectionData.aboutSectionHeading }} />
+						<div className="mt-4 text-light-gray font-light text-base md:text-xl"
 							dangerouslySetInnerHTML={{ __html: aboutUsHeroSectionData.aboutSectionDescription }}>
-						</p>
+						</div>
 					</Container>
 				</Wrapper>
 

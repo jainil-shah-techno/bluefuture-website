@@ -14,7 +14,7 @@ export default function Pagination({ total, postsPerPage = 10, currentPage = 1 }
 
 	return (
 		<Wrapper className="bg-dark-blue text-white py-16 overflow-hidden">
-			<Container>
+			<Container className="" >
 				<div className="flex justify-center items-center gap-3 py-4">
 					{currentPage > 1 ? (
 						<Link href={createPageLink(currentPage - 1)} className="w-10 h-10 flex items-center justify-center rounded-full bg-[#1C1C2A] text-white hover:bg-[#2c2c3a]" >

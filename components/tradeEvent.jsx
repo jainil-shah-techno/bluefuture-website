@@ -19,8 +19,7 @@ export default function TradeEvent({ tradeEventSectionData }) {
 		<Wrapper className="py-24 text-white">
 			<Container className="max-w-7xl mx-auto px-4">
 				<div className="text-center">
-					<h2
-						className="text-3xl md:text-5xl font-medium"
+					<h2 className="text-3xl md:text-5xl font-medium"
 						dangerouslySetInnerHTML={{ __html: tradeEventSectionData?.tradeEventHeading }}
 					/>
 					<p className="mt-2 md:mt-4 text-light-gray text-base md:text-xl font-light">

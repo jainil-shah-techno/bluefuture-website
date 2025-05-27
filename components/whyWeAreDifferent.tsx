@@ -9,12 +9,9 @@ export default function WhyWeAreDifferent({ whyAreWeDifferentSectionData }) {
 		<Wrapper className="bg-dark-blue text-white py-16 overflow-hidden">
 			<Container className="">
 				<div className="flex flex-col justify-center items-center gap-6 text-center mb-12">
-					<h2 className="font-inter text-4xl md:text-5xl font-bold"
-						dangerouslySetInnerHTML={{ __html: whyAreWeDifferentSectionData.sectionHeading, }}
+					<h2 className="font-inter text-4xl md:text-5xl font-bold" dangerouslySetInnerHTML={{ __html: whyAreWeDifferentSectionData.sectionHeading, }}
 					/>
-					<p className="text-lg md:text-xl text-light-gray"
-						dangerouslySetInnerHTML={{ __html: whyAreWeDifferentSectionData.sectionDescription, }}
-					/>
+					<div className="text-lg md:text-xl text-light-gray" dangerouslySetInnerHTML={{ __html: whyAreWeDifferentSectionData.sectionDescription, }} />
 				</div>
 
 				<div className="relative w-full overflow-hidden">
