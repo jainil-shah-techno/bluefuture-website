@@ -1,21 +1,38 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.query.secret !== process.env.REVALIDATE_SECRET) {
-    return res.status(401).json({ message: 'Invalid token' });
-  }
+	const { secret, path } = req.query
 
-  try {
-    // Revalidate homepage by default
-    await res.revalidate('/');
+	// Validate secret token
+	if (secret !== process.env.REVALIDATE_SECRET) {
+	return res.status(401).json({ message: 'Invalid token' })
+	}
 
-    // Optionally revalidate a specific path if passed
-    if (req.query.path) {
-      await res.revalidate(req.query.path as string);
-    }
+	try {
+	const pathsToRevalidate: string[] = []
 
-    return res.json({ revalidated: true });
-  } catch (err) {
-    return res.status(500).json({ message: 'Error revalidating', error: err });
-  }
+	javascript
+	Copy
+	Edit
+	// If a specific path is provided, use it; otherwise, revalidate the homepage
+	if (typeof path === 'string') {
+	  pathsToRevalidate.push(path)
+	} else {
+	  pathsToRevalidate.push('/')
+	}
+
+	// Revalidate each path
+	for (const p of pathsToRevalidate) {
+	  console.log(`Revalidating path: ${p}`)
+	  await res.revalidate(p)
+	}
+
+	return res.json({ revalidated: true, paths: pathsToRevalidate })
+	} catch (err: any) {
+	console.error('Revalidation error:', err)
+	return res.status(500).json({
+	message: 'Error revalidating',
+	error: err.message || err.toString(),
+	})
+	}
 }
