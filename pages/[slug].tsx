@@ -70,6 +70,6 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({ params }) 
 			headerData,
 			footerData
 		},
-		revalidate: 10
+		{ revalidate: 10 }
 	};
 };

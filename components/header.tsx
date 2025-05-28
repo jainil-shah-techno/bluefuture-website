@@ -17,8 +17,11 @@ export default function Header({ headerData }) {
 			<Container className="!px-4 md:!px-5">
 				<div className="flex items-center justify-between py-4 relative">
 					<div>
-						<Image src={headerData.headerFields.logo?.node.sourceUrl} alt="Blufutur Logo" 
-							width={163} height={44} />
+						<Link href="/">
+							<Image  src={headerData.headerFields.logo?.node.sourceUrl}  
+								alt="Blufutur Logo" width={163} height={44} />
+						</Link>
+
 					</div>
 
 					<div className="md:flex gap-4">
