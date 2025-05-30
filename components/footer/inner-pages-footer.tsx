@@ -2,8 +2,8 @@ import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Container from "../container";
-import Wrapper from "../wrapper";
+import Container from "../design/container";
+import Wrapper from "../design/wrapper";
 
 
 export default function InnerPagesFooter() {

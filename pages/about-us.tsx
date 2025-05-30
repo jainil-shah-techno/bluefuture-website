@@ -9,7 +9,7 @@ import Wrapper from "../components/design/wrapper";
 import Header from "../components/header";
 import Footer from "../components/footer/footer";
 import InnerPagesFooter from "../components/footer/inner-pages-footer";
-import DifferenceWeMake from "../components/about-us-sections/difference-we-make";
+import DifferenceWeMake from "../components/repeated-sections/difference-we-make";
 import AboutUsHeroSection from "../components/hero-sections/aboutUsHeroSection";
 import ValuesStory from "../components/about-us-sections/valuesStory";
 import WhyWeAreDifferent from "../components/about-us-sections/whyWeAreDifferent";

@@ -4,8 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Container from "../design/container";
 import Wrapper from "../design/wrapper";
-import Header from "../components/header";
-import Footer from "../components/footer/footer";
 
 export default function TestimonialSection({ testimonialSectionData }) {
 
