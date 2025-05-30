@@ -3,17 +3,17 @@ import React, { useState } from "react";
 import { GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Container from "../components/container";
-import Layout from "../components/layout";
-import Wrapper from "../components/wrapper";
+import Layout from "../components/design/layout";
+import Container from "../components/design/container";
+import Wrapper from "../components/design/wrapper";
 import Header from "../components/header";
 import Footer from "../components/footer/footer";
 import InnerPagesFooter from "../components/footer/inner-pages-footer";
-import JobSeekersHeroSection from "../components/jobSeekersHeroSection";
-import Profile from "../components/profile";
-import FAQs from "../components/faqs";
-import DifferenceWeMake from "../components/difference-we-make";
-import HowItWorks from "../components/howItWorks";
+import JobSeekersHeroSection from "../components/hero-sections/jobSeekersHeroSection";
+import Profile from "../components/repeated-sections/profile";
+import FAQs from "../components/repeated-sections/faqs";
+import DifferenceWeMake from "../components/repeated-sections/difference-we-make";
+import HowItWorks from "../components/repeated-sections/howItWorks";
 
 import { getHeaderData, getFooterData, getJobSeekersData } from "../lib/api";
 

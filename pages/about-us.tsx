@@ -3,17 +3,17 @@ import React, { useState } from "react";
 import { GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Container from "../components/container";
-import Layout from "../components/layout";
-import Wrapper from "../components/wrapper";
+import Layout from "../components/design/layout";
+import Container from "../components/design/container";
+import Wrapper from "../components/design/wrapper";
 import Header from "../components/header";
 import Footer from "../components/footer/footer";
 import InnerPagesFooter from "../components/footer/inner-pages-footer";
-import DifferenceWeMake from "../components/difference-we-make";
-import AboutUsHeroSection from "../components/aboutUsHeroSection";
-import ValuesStory from "../components/valuesStory";
-import WhyWeAreDifferent from "../components/whyWeAreDifferent";
-import Impact from "../components/impact";
+import DifferenceWeMake from "../components/about-us-sections/difference-we-make";
+import AboutUsHeroSection from "../components/hero-sections/aboutUsHeroSection";
+import ValuesStory from "../components/about-us-sections/valuesStory";
+import WhyWeAreDifferent from "../components/about-us-sections/whyWeAreDifferent";
+import Impact from "../components/about-us-sections/impact";
 
 import { getHeaderData, getFooterData, getAboutUsData } from "../lib/api";
 

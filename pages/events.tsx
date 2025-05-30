@@ -3,13 +3,13 @@ import React, { useState } from "react";
 import { GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Container from "../components/container";
-import Layout from "../components/layout";
-import Wrapper from "../components/wrapper";
+import Layout from "../components/design/layout";
+import Container from "../components/design/container";
+import Wrapper from "../components/design/wrapper";
 import Header from "../components/header";
 import Footer from "../components/footer/footer";
-import EventsHeroSection from "../components/eventsHeroSection";
-import FeaturedEvents from "../components/featuredEvents";
+import EventsHeroSection from "../components/hero-sections/eventsHeroSection";
+import FeaturedEvents from "../components/events-section/featuredEvents";
 
 import { getHeaderData, getFooterData, getEventsData } from "../lib/api";
 

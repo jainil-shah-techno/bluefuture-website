@@ -6,12 +6,11 @@ import {
 	getHeaderData,
 	getFooterData
 } from "../lib/api";
-
-import Layout from "../components/layout";
+import Layout from "../components/design/layout";
 import Header from "../components/header";
 import Footer from "../components/footer/footer";
-import SingleBlogHeroSection from "../components/singleBlogHeroSection";
-import SingleBlogContent from "../components/singleBlogContent";
+import SingleBlogHeroSection from "../components/hero-sections/singleBlogHeroSection";
+import SingleBlogContent from "../components/blogs-section/singleBlogContent";
 
 interface Props {
 	post: any;
@@ -24,12 +23,18 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function BlogPostPage({ post, headerData, footerData }: Props) {
+
 	return (
 		<Layout>
+
 			<Header headerData={headerData} />
+
 			<SingleBlogHeroSection post={post} />
+
 			<SingleBlogContent post={post} />
+
 			<Footer footerData={footerData} />
+			
 		</Layout>
 	);
 }

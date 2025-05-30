@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Wrapper from '../components/wrapper';
-import Container from '../components/container';
+import Container from "../components/design/container";
+import Wrapper from "../components/design/wrapper";
 import { Menu, X } from 'lucide-react';
 
 export default function Header({ headerData }) {

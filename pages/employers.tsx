@@ -3,16 +3,14 @@ import React, { useState } from "react";
 import { GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Container from "../components/container";
-import Layout from "../components/layout";
-import Wrapper from "../components/wrapper";
+import Layout from "../components/design/layout";
+import Container from "../components/design/container";
+import Wrapper from "../components/design/wrapper";
 import Header from "../components/header";
 import Footer from "../components/footer/footer";
 import InnerPagesFooter from "../components/footer/inner-pages-footer";
-import EmployerHeroSection from "../components/employerHeroSection";
-import Crew from "../components/crew";
-import CoursesHeroSection from "../components/coursesHeroSection";
-import EventsHeroSection from "../components/eventsHeroSection";
+import EmployerHeroSection from "../components/hero-sections/employerHeroSection";
+import Crew from "../components/repeated-sections/crew";
 
 import { getHeaderData, getEmployersData, getFooterData } from "../lib/api";
 

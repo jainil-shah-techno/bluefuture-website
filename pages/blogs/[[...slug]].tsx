@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { getHeaderData, getFooterData, getAllPostsWithBlogSettings } from "../../lib/api";
-import Layout from "../../components/layout";
+import Layout from "../../components/design/layout";
 import Header from "../../components/header";
 import Footer from "../../components/footer/footer";
-import BlogsLoop from "../../components/blogsLoop";
-import Pagination from "../../components/pagination";
+import BlogsLoop from "../../components/blogs-section/blogsLoop";
+import Pagination from "../../components/blogs-section/pagination";
 
 export default function Blogs({ headerData, footerData, blogData, currentPage, totalPages }) {
 
